@@ -1,6 +1,7 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Home } from './Components/Home';
+import Clock from './Components/Clock';
 
 function App() {
   return (

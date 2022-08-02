@@ -1,0 +1,15 @@
+.clockContainer{
+    margin: 0 auto;
+    width: fit-content;
+    margin-top: 20px;
+}
+
+.clock {
+    text-align: center;
+    background-color: cornflowerblue;
+    color: whitesmoke;
+    border: 10px solid cornflowerblue;
+    border-radius: 4rem;
+    width: 300px ;
+
+}
