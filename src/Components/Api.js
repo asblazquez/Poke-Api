@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 
 //const [pokemon, setPokemon] = useState([])
 
@@ -20,7 +20,7 @@ const Api = () => {
     <div className=" container text-center w-25 mt-4">
         <form>
             <input className="form-control" type="text" placeholder="Pokemon..."/>
-            <button type="submit" class="mt-2 btn btn-primary">Buscar</button>
+            <button type="submit" className="mt-2 btn btn-primary">Buscar</button>
         </form>
         <div className="pokemon-container mt-4"> 
             
