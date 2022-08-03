@@ -19,8 +19,8 @@ import logo from './Imagenes/PokeApi.png';
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link className='text-light' href="/home">Pokemon</Nav.Link>
-            <Nav.Link className='text-light' href="/Item">Item</Nav.Link>
+            <Nav.Link className='text-light' href="/pokemon">Pokemon</Nav.Link>
+            <Nav.Link className='text-light' href="/item">Item</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
