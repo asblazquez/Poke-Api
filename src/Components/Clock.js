@@ -26,7 +26,7 @@ class Clock extends React.Component{
     render(){
         return(
             <div className='clockContainer'>
-                <div className='clock'>
+                <div className='clock row col-2 offset-9 mt-4'>
                     <h1>Hora</h1>
                     <h2>{this.state.date.toLocaleTimeString()}</h2>
                 </div>
