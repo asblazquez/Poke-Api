@@ -17,18 +17,24 @@ export function Formulario(props) {
   }
 
   const { getPokemon } = useAuth()
+  const { pokemonObj } = useAuth()
 
   const handleSubmit = (e) => {
     e.preventDefault()
     try{
-      var value = getPokemon(pokemon.name)
-      .then(() => console.log(value))
+      getPokemon(pokemon.name)
+      .then(() => prueba())
       .catch(error => {
         toast.error(error)
       })
     }catch (err){
       toast.error(err)
     }
+  }
+
+  const prueba = () => {
+    debugger
+    console.log(pokemonObj)
   }
 
   return (
