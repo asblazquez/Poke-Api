@@ -13,6 +13,7 @@ export function Formulario(props) {
   })
 
   const handleChange = ({target: {name, value}}) => {
+    console.log(value)
     setPokemon({...pokemon, [name]: value})
   }
 
@@ -33,7 +34,6 @@ export function Formulario(props) {
   }
 
   const prueba = () => {
-    debugger
     console.log(pokemonObj)
   }
 

@@ -10,21 +10,23 @@ export const useAuth = () => {
 
 export function AuthProvider({children}) {
 
-  const [pokemonObj, setPokemon] = useState(null)
+  const [pokemonObj, setPokemon] = useState('')
+
+  var result
 
   const getPokemon = (pokemon) => {
     fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}/`)
     .then((res) => res.json())
     .then((data) => {
-      console.log(pokemonObj)
-      debugger
+      result = data
+      console.log(data)
     }) 
     .catch(err => {
           console.log(err);
     })
   }
 
-  useEffect(() => { setPokemon('1')}, [] )
+  useEffect(() => { setPokemon(result)}, [] )
 
   return (
       <authContext.Provider value={{getPokemon, pokemonObj}}>
