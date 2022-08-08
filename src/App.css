@@ -21,3 +21,7 @@
 .containerMain {
     margin-top: 5rem;
 }
+
+.titleTxt:first-letter {
+    text-transform: uppercase;   
+}
