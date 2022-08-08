@@ -1,4 +1,3 @@
-import { getPokemon } from './Api';
 import Clock from './Clock';
 
 

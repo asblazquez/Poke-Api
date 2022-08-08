@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useState } from 'react';
 
 export const authContext = createContext()
 
@@ -10,23 +10,19 @@ export const useAuth = () => {
 
 export function AuthProvider({children}) {
 
-  const [pokemonObj, setPokemon] = useState('')
+  const [pokemonObj, setPokemon] = useState(null)
 
-  var result
 
   const getPokemon = (pokemon) => {
     fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}/`)
     .then((res) => res.json())
     .then((data) => {
-      result = data
-      console.log(data)
+      setPokemon(data)
     }) 
     .catch(err => {
           console.log(err);
     })
   }
-
-  useEffect(() => { setPokemon(result)}, [] )
 
   return (
       <authContext.Provider value={{getPokemon, pokemonObj}}>
