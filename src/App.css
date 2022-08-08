@@ -1,17 +1,17 @@
-.clockContainer{
-    margin: 0 auto;
-    width: fit-content;
-    margin-top: 20px;
-}
+/* .clockContainer{
+
+    
+} */
 
 .clock {
     text-align: center;
-    background-color: cornflowerblue;
-    color: whitesmoke;
-    border: 10px solid cornflowerblue;
+    background-color: rgb(243, 86, 86);
+    color: black;
+    border: 10px solid black;
     border-radius: 4rem;
     width: 300px ; 
 
+    width: 300px ;
 }
 
 .pokemonCard {

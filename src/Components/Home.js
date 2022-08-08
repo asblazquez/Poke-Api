@@ -1,8 +1,5 @@
 import Clock from './Clock';
 
-
-
-
 export function Home() {
 
   return (
