@@ -13,22 +13,28 @@ export function Formulario(props) {
   })
 
   const handleChange = ({target: {name, value}}) => {
+    console.log(value)
     setPokemon({...pokemon, [name]: value})
   }
 
   const { getPokemon } = useAuth()
+  const { pokemonObj } = useAuth()
 
   const handleSubmit = (e) => {
     e.preventDefault()
     try{
-      var value = getPokemon(pokemon.name)
-      .then(() => console.log(value))
+      getPokemon(pokemon.name)
+      .then(() => prueba())
       .catch(error => {
         toast.error(error)
       })
     }catch (err){
       toast.error(err)
     }
+  }
+
+  const prueba = () => {
+    console.log(pokemonObj)
   }
 
   return (

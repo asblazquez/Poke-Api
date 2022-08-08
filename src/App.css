@@ -9,5 +9,15 @@
     color: black;
     border: 10px solid black;
     border-radius: 4rem;
+    width: 300px ; 
+
     width: 300px ;
+}
+
+.pokemonCard {
+    margin: none;
+}
+
+.containerMain {
+    margin-top: 5rem;
 }

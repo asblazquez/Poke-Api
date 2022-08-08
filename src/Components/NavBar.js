@@ -5,7 +5,7 @@ import logo from './Imagenes/PokeApi.png';
 
  export function NavBar() {
   return (
-    <Navbar bg="dark" expand="lg">
+    <Navbar bg="dark" fixed='top' expand="lg">
       <Container>
         <Navbar.Brand href="#">
         <img
