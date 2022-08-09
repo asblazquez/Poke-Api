@@ -3,8 +3,8 @@ export function ImagenTipo(props) {
   return (
     <img
       src={props.url}
-      width="80"
-      height="30"
+      width="50"
+      height="50"
       alt="Imagen de tipo"
       className="imageType"
     />
