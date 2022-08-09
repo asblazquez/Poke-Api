@@ -33,7 +33,7 @@ export function Formulario(props) {
     <div className='mt-3'>
       <ToastContainer/>
         <Row className='justify-content-center' >        
-            <Col xs={4}>
+            <Col xs={12} md={4}>
               <Form>
                 <Form.Group className="mb-3" controlId="form">
                     <Form.Control type="text" name='name' placeholder={props.name} onChange={onChangeInput}/>
@@ -43,7 +43,7 @@ export function Formulario(props) {
                 </Form.Group>
               </Form>
             </Col>
-            <Col xs={2}>
+            <Col xs={12} md={2}>
             <Button variant="primary" type="submit" onClick={buscarPokemon}>
                 Buscar {props.name}
             </Button>

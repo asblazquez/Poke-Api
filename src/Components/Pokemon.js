@@ -15,6 +15,7 @@ export function Pokemon() {
           frontSprite = {pokemonObj.sprites.front_default}
           type = {pokemonObj.types}
           shinySprite = {pokemonObj.sprites.front_shiny}
+          numPokedex = {pokemonObj.game_indices[0].game_index}
           />
       </Container>
     )

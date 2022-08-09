@@ -14,16 +14,16 @@
     width: 300px ;
 }
 
-.pokemonCard {
-    margin: none;
-}
-
 .containerMain {
     margin-top: 5rem;
 }
 
 .titleTxt:first-letter {
-    text-transform: uppercase;   
+    text-transform: uppercase;
+
+}
+.titleTxt{
+    font-weight: bold; 
 }
 
 .imageType{
@@ -44,4 +44,46 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+/***************************************************************************************/
+/******************************** Carta Pokemon  ***************************************/
+/***************************************************************************************/
+
+.carta{
+    margin: auto;
+    background-color: #f6c41c;
+    border-radius: 5px !important;
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+    height: 25rem;
+    width: 15rem;
+}
+
+.cartaHeader{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.cartaImg {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    background-color: white;
+    border-style: solid !important;
+    border-color: black !important;
+    border-width: 2px;
+}   
+
+.imageType{
+    border-radius: 100%;
+    background-color: black;
+}
+
+.cartaBodyTypes {
+    padding: 1rem;
+}
+
+.pokedexIcon {
+    margin-top: -4;
 }
