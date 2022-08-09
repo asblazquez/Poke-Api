@@ -14,6 +14,7 @@ export function Pokemon() {
           name = {pokemonObj.name}
           frontSprite = {pokemonObj.sprites.front_default}
           type = {pokemonObj.types}
+          shinySprite = {pokemonObj.sprites.front_shiny}
           />
       </Container>
     )
@@ -22,6 +23,7 @@ export function Pokemon() {
       <Container className='containerMain'>
           <Formulario name = 'Pokemon'/>
       </Container>
+
     )
   }
 }

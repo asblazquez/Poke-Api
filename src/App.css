@@ -29,3 +29,19 @@
 .imageType{
     margin-right: 1rem;
 }
+
+.btnShiny{
+    text-align: end;
+    cursor: pointer;
+}
+
+.btnShiny:hover{
+    cursor: pointer;
+}
+
+.notSelectable {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

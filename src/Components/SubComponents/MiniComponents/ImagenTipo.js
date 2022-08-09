@@ -7,6 +7,7 @@ export function ImagenTipo(props) {
       height="50"
       alt="Imagen de tipo"
       className="imageType"
+      title={props.title}
     />
   )
 }
