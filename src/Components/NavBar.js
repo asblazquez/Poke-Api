@@ -16,8 +16,8 @@ import logo from './Imagenes/PokeApi.png';
               alt="React Bootstrap logo"
             />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Toggle aria-controls="basic-navbar-nav text-light" />
+        <Navbar.Collapse id="basic-navbar-nav text-light">
           <Nav className="me-auto">
             <Nav.Link className='text-light' href="/pokemon">Pokemon</Nav.Link>
             <Nav.Link className='text-light' href="/item">Item</Nav.Link>
