@@ -10,7 +10,6 @@
     border: 10px solid black;
     border-radius: 4rem;
     width: 300px ; 
-
     width: 300px ;
 }
 
@@ -47,16 +46,15 @@
 }
 
 /***************************************************************************************/
-/******************************** Carta Pokemon  ***************************************/
+/********************************* Carta Pokemon ***************************************/
 /***************************************************************************************/
 
 .carta{
     margin: auto;
-    background-color: #f6c41c;
     border-radius: 5px !important;
-    border-color: black;
+    border-color: #f6c41c;
     border-style: solid;
-    border-width: 2px;
+    border-width: 0.5rem;
     height: 25rem;
     width: 15rem;
 }
@@ -69,10 +67,13 @@
 .cartaImg {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
-    background-color: white;
     border-style: solid !important;
-    border-color: black !important;
-    border-width: 2px;
+    border-color: #f6c41c!important;
+    border-width: 0.3rem;
+    background-image: url('https://vignette.wikia.nocookie.net/epicrapbattlesofhistory/images/c/c9/Pok%C3%A9mon_Go_Grass_Field_Based_On.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }   
 
 .imageType{
@@ -85,5 +86,5 @@
 }
 
 .pokedexIcon {
-    margin-top: -4;
+    margin-top: -3px;
 }

@@ -33,6 +33,27 @@ export function AuthProvider({children}) {
     dragon:'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Pok%C3%A9mon_Dragon_Type_Icon.svg/640px-Pok%C3%A9mon_Dragon_Type_Icon.svg.png',
   }
 
+  const COLOR_TIPOS = {
+    normal: 'grey',
+    poison: 'rgb(212, 0, 255)',
+    grass: 'green',
+    electric: 'yelow',
+    ground: 'rgb(159, 98, 0)',
+    flying: 'rgb(94, 141, 199)',
+    ice:  'rgb(145, 224, 255)',
+    rock: 'rgb(71, 71, 71)',
+    bug: 'rgb(106, 255, 0)',
+    psychic: 'rgb(255, 0, 149)',
+    dark: 'rgb(84, 55, 87)',
+    fighting: 'rgb(255, 81, 0)',
+    steel: 'rgb(123, 133, 137)',
+    fire: 'orangered',
+    fairy: 'rgb(255, 121, 244)',
+    water: 'blue',
+    ghost: 'rgb(91, 91, 91)',
+    dragon: 'rgb(59, 0, 136)'
+  }
+
   const getPokemon = (pokemon) => {
     fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}/`)
     .then((res) => res.json())
@@ -48,8 +69,12 @@ export function AuthProvider({children}) {
     return TIPOS[type]
   }
 
+  const getColorTypes = (type) => {
+    return COLOR_TIPOS[type]
+  }
+
   return (
-      <authContext.Provider value={{getPokemon, pokemonObj, getImgType}}>
+      <authContext.Provider value={{getPokemon, pokemonObj, getImgType, getColorTypes}}>
           {children}
       </authContext.Provider>
   )

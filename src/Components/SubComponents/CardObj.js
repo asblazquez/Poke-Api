@@ -1,15 +1,16 @@
 import  Row  from 'react-bootstrap/Row';
 import  Col  from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { ImagenTipo } from './MiniComponents/ImagenTipo';
 import { AiFillStar } from 'react-icons/ai';
 import { MdCatchingPokemon } from 'react-icons/md';
+import { GoInfo } from 'react-icons/go';
 import { useAuth } from '../Api';
 
 export function CardObj(props) {
 
   const { getImgType } = useAuth()
+  const { getColorTypes } = useAuth()
 
   var PokemonImage = props.frontSprite
 
@@ -20,8 +21,12 @@ export function CardObj(props) {
     document.getElementById("pokemonImg").src = PokemonImage
   }
 
+  const redirectToWiki = () => {
+    window.open(linkUrl)
+  }
+
   return (
-      <div className='carta mt-3'>
+      <div className='carta mt-3' style={{ backgroundColor: getColorTypes(props.type[0].type.name) }}>
         <Row className='cartaHeader'>
           <Col className='titleTxt' xs={10}>
             {props.name}
@@ -41,11 +46,11 @@ export function CardObj(props) {
           </Col>         
         </Row>
         <Row className='justify-content-center'>
-          <Col xs={7} className='align-content-end'>
+          <Col xs={6} className='align-content-end text-center'>
               <MdCatchingPokemon className='pokedexIcon'/> {props.numPokedex}
           </Col>
-          <Col xs={3}>
-            <Button variant="primary" href={linkUrl} >Wiki</Button>
+          <Col xs={6} className='text-center'>
+            <GoInfo type='button' onClick={redirectToWiki} className='notSelectable'/>
           </Col>
         </Row>
       </div>
