@@ -19,7 +19,6 @@ export function Formulario(props) {
 
   const { getPokemon } = useAuth()
 
-
   const buscarPokemon = (e) => {
     e.preventDefault()
     try{
@@ -32,13 +31,13 @@ export function Formulario(props) {
   return (
     <div className='mt-3'>
       <ToastContainer/>
-        <Row className='justify-content-center' >        
+        <Row className='justify-content-center bg-dark pt-3 pb-3 br-5'>        
             <Col xs={12} md={4}>
               <Form>
                 <Form.Group className="mb-3" controlId="form">
                     <Form.Control type="text" name='name' placeholder={props.name} onChange={onChangeInput}/>
-                    <Form.Text className="text-muted">
-                    Introduce el nombre de un {props.name} o su id
+                    <Form.Text className="text-light">
+                      Introduce el nombre de un {props.name} o su id
                     </Form.Text>
                 </Form.Group>
               </Form>

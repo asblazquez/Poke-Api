@@ -37,7 +37,7 @@ export function AuthProvider({children}) {
     normal: 'grey',
     poison: 'rgb(212, 0, 255)',
     grass: 'green',
-    electric: 'yelow',
+    electric: 'yellow',
     ground: 'rgb(159, 98, 0)',
     flying: 'rgb(94, 141, 199)',
     ice:  'rgb(145, 224, 255)',

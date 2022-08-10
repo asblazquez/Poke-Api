@@ -2,7 +2,7 @@ import Container from 'react-bootstrap/Container';
 import { Formulario } from './SubComponents/Formulario';
 import { useAuth } from './Api'
 import { CardObj } from './SubComponents/CardObj';
-import { CarouselElement } from './SubComponents/CarouselElement';
+
 
 export function Pokemon() {
 
@@ -18,8 +18,8 @@ export function Pokemon() {
           type = {pokemonObj.types}
           shinySprite = {pokemonObj.sprites.front_shiny}
           numPokedex = {pokemonObj.game_indices[0].game_index}
+          sprites = {pokemonObj.sprites}
           />
-          <CarouselElement sprites = {pokemonObj.sprites}/>
       </Container>
     )
   } else{

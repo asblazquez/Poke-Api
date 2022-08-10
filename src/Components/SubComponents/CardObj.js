@@ -1,8 +1,7 @@
 import  Row  from 'react-bootstrap/Row';
 import  Col  from 'react-bootstrap/Col';
-import Card from 'react-bootstrap/Card';
+import { CarouselElement } from '../SubComponents/CarouselElement';
 import { ImagenTipo } from './MiniComponents/ImagenTipo';
-import { AiFillStar } from 'react-icons/ai';
 import { MdCatchingPokemon } from 'react-icons/md';
 import { GoInfo } from 'react-icons/go';
 import { useAuth } from '../Api';
@@ -12,14 +11,7 @@ export function CardObj(props) {
   const { getImgType } = useAuth()
   const { getColorTypes } = useAuth()
 
-  var PokemonImage = props.frontSprite
-
   var linkUrl = 'https://pokemon.fandom.com/es/wiki/' + props.name
-
-  const setShiny = () => {
-    PokemonImage === props.frontSprite ? PokemonImage = props.shinySprite : PokemonImage = props.frontSprite
-    document.getElementById("pokemonImg").src = PokemonImage
-  }
 
   const redirectToWiki = () => {
     window.open(linkUrl)
@@ -31,12 +23,9 @@ export function CardObj(props) {
           <Col className='titleTxt' xs={10}>
             {props.name}
           </Col>
-          <Col xs={1}>
-          <AiFillStar title='Shiny' onClick={setShiny} className='notSelectable'/>
-          </Col>
         </Row>
         <div className='cartaImg'>
-          <Card.Img className='notSelectable' variant="top" src={PokemonImage} title={props.name} id='pokemonImg' />
+          <CarouselElement sprites = {props.sprites}/>
         </div>
         <Row className='cartaBodyTypes'>
           <Col className='imgType'>

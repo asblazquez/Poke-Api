@@ -5,7 +5,7 @@ import logo from './Imagenes/PokeApi.png';
 
  export function NavBar() {
   return (
-    <Navbar bg="dark" fixed='top' expand="lg">
+    <Navbar variant='dark' bg='dark' fixed='top' expand="lg">
       <Container>
         <Navbar.Brand href="#">
         <img
@@ -16,7 +16,7 @@ import logo from './Imagenes/PokeApi.png';
               alt="React Bootstrap logo"
             />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav text-light" />
+        <Navbar.Toggle aria-controls="basic-navbar-nav"/>
         <Navbar.Collapse id="basic-navbar-nav text-light">
           <Nav className="me-auto">
             <Nav.Link className='text-light' href="/pokemon">Pokemon</Nav.Link>
