@@ -2,6 +2,7 @@ import Container from 'react-bootstrap/Container';
 import { Formulario } from './SubComponents/Formulario';
 import { useAuth } from './Api'
 import { CardObj } from './SubComponents/CardObj';
+import { Abilities } from './SubComponents/Abilities';
 
 
 export function Pokemon() {
@@ -20,6 +21,7 @@ export function Pokemon() {
           numPokedex = {pokemonObj.game_indices[0].game_index}
           sprites = {pokemonObj.sprites}
           />
+          <Abilities lAbilities={pokemonObj.abilities}/>
       </Container>
     )
   } else{

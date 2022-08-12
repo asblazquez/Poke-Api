@@ -12,6 +12,8 @@ export function AuthProvider({children}) {
 
   const [pokemonObj, setPokemon] = useState(null)
 
+  const [abilityObj, setAbility] = useState(null)
+
   const TIPOS = {
     normal: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Pok%C3%A9mon_Normal_Type_Icon.svg/640px-Pok%C3%A9mon_Normal_Type_Icon.svg.png',
     poison: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Pok%C3%A9mon_Poison_Type_Icon.svg/640px-Pok%C3%A9mon_Poison_Type_Icon.svg.png',
@@ -65,6 +67,17 @@ export function AuthProvider({children}) {
     })
   }
 
+  const getAbility = (ability) => {
+    fetch(`https://pokeapi.co/api/v2/ability/${ability}/`)
+    .then((res) => res.json())
+    .then((data) => {
+      setAbility(data)
+    })
+    .catch(err => {
+      console.log(err);
+    })
+  }
+
   const getImgType = (type) => {
     return TIPOS[type]
   }
@@ -74,7 +87,10 @@ export function AuthProvider({children}) {
   }
 
   return (
-      <authContext.Provider value={{getPokemon, pokemonObj, getImgType, getColorTypes}}>
+      <authContext.Provider 
+      value={{getPokemon, pokemonObj, 
+              getImgType, getColorTypes,
+              getAbility, abilityObj}}>
           {children}
       </authContext.Provider>
   )

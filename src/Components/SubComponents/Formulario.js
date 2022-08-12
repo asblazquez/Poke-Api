@@ -2,7 +2,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { useAuth } from '../Api'
+import { useAuth } from '../Api';
 import { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 
@@ -36,7 +36,7 @@ export function Formulario(props) {
               <Form>
                 <Form.Group className="mb-3" controlId="form">
                     <Form.Control type="text" name='name' placeholder={props.name} onChange={onChangeInput}/>
-                    <Form.Text className="text-light">
+                    <Form.Text className="text-light notSelectable">
                       Introduce el nombre de un {props.name} o su id
                     </Form.Text>
                 </Form.Group>

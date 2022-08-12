@@ -3,7 +3,7 @@ import Row from 'react-bootstrap/Row';
 
 export function CarouselElement(props) {
   return (
-    <Row className='justify-content-center mt-3'>
+    <Row className='justify-content-center'>
       <Carousel variant="light" style={{width: '100%'}}>
         <Carousel.Item>
           <img
@@ -30,11 +30,8 @@ export function CarouselElement(props) {
           <img
             className="d-block w-100"
             src={props.sprites.front_shiny}
-            alt="Third slide"
+            alt=""
           />
-          <Carousel.Caption>
-            <p></p>
-          </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
     </Row>
