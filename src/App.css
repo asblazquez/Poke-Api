@@ -30,11 +30,10 @@ body{
 }
 
 .btnShiny{
-    text-align: end;
     cursor: pointer;
 }
 
-.btnShiny:hover{
+.btnIcon:hover{
     cursor: pointer;
 }
 
@@ -45,8 +44,18 @@ body{
     user-select: none;
 }
 
+.brTop-5 {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.brBottom-5 {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
 .br-5 {
-    border-radius: 5px;
+ border-radius: 5px;
 }
 
 /***************************************************************************************/

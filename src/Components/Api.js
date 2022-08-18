@@ -57,6 +57,7 @@ export function AuthProvider({children}) {
   }
 
   const getPokemon = (pokemon) => {
+    
     fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}/`)
     .then((res) => res.json())
     .then((data) => {

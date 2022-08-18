@@ -8,28 +8,28 @@ export function CarouselElement(props) {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src={props.sprites.back_default}
+            src={props.sprites.front_default}
             alt="First slide"
           />
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src={props.sprites.back_shiny}
+            src={props.sprites.back_default}
             alt="Second slide"
           />
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src={props.sprites.front_default}
+            src={props.sprites.front_shiny}
             alt="Third slide"
           />
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src={props.sprites.front_shiny}
+            src={props.sprites.back_shiny}
             alt=""
           />
         </Carousel.Item>
