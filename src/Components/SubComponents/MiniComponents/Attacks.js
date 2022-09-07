@@ -2,50 +2,32 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Table from 'react-bootstrap/Table';
 import { RiBoxingFill } from 'react-icons/ri';
-import { Pager } from './Pager';
+import { useState } from 'react';
+
 
 export function Attacks(props) {
+  
+    const [Move, setMove] = useState([])
+    var axios = require("axios").default;
+
     var isVisible = false;
-
     var lAttacks = []
-
-    var pagerNums = 0
-
-    const pager = (numItems) => { 
-      if(numItems <= 10){
-        pagerNums = 1
-      } else if((numItems <= 20)){
-        pagerNums = 2
-      } else if((numItems <= 30)){
-        pagerNums = 3
-      } else if((numItems <= 40)){
-        pagerNums = 4
-      } else if((numItems <= 50)){
-        pagerNums = 5
-      } else if((numItems <= 60)){
-        pagerNums = 6
-      } else if((numItems <= 70)){
-        pagerNums = 7
-      } else if((numItems <= 80)){
-        pagerNums = 8
-      } else if((numItems <= 90)){
-        pagerNums = 9
-      } else if((numItems <= 100)){
-        pagerNums = 10
-      } else if((numItems <= 110)){
-        pagerNums = 11
-      } else if((numItems <= 120)){
-        pagerNums = 12
-      } else if((numItems <= 130)){
-        pagerNums = 13
-      }
-      return pagerNums
-    }
-
     for (let index = 0; index < props.attak.length; index++) {
         lAttacks.push(props.attak[index].move.name)     
     }
-    
+
+    const getMoveData = async (name) => {
+      try{
+        const data = await axios.get(
+          `https://pokeapi.co/api/v2/move/${name}/`
+        )
+        setMove(data.data)
+        console.log(Move)
+      }catch(e){
+        console.error(e)
+      }
+    }
+
     const showMoves = () => {
         if(isVisible){
             document.getElementById('moves').style.visibility = 'hidden'
@@ -73,6 +55,7 @@ export function Attacks(props) {
               </thead>
               <tbody>
                 {lAttacks.map((item, index) => {
+                  getMoveData(item)
                   return(
                     <tr key={index}>
                         <td>{index}</td>
@@ -82,7 +65,6 @@ export function Attacks(props) {
                 })}
               </tbody>
             </Table>
-            <Pager num = {pager(lAttacks.length)}/>
         </Row>
     </div>
   )
